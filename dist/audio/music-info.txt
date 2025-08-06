@@ -1,0 +1,24 @@
+背景音乐文件说明
+==================
+
+请将以下免费背景音乐文件放置在此目录：
+
+1. background-music.mp3 - 主背景音乐
+   - 推荐风格：悬疑、氛围、轻音乐
+   - 时长：2-5分钟（循环播放）
+   - 文件大小：建议5MB以内
+   - 格式：MP3, 128kbps
+
+免费音乐资源推荐：
+- Freesound.org (CC0许可)
+- YouTube Audio Library
+- Pixabay Music
+- Incompetech (Kevin MacLeod)
+
+搜索关键词：
+- "mystery ambient"
+- "dark atmosphere"
+- "suspense background"
+- "noir detective"
+
+注意：请确保音乐文件具有适当的使用许可，避免版权问题。

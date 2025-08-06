@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>文字推理游戏</title>
+  <style>
+    @font-face {
+      font-family: 'JingHuaOldSong';
+      src: url('./public/fonts/JingHuaOldSong.woff2') format('woff2'),
+           url('./public/fonts/JingHuaOldSong.woff') format('woff'),
+           url('./public/fonts/JingHuaOldSong.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'JingHuaOldSong', 'SimSun', serif;
+      background-color: #000000;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+    
+    #root {
+      min-height: 100vh;
+      width: 100%;
+    }
+    
+    /* 预加载动画 */
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    
+    .loading-text {
+      font-size: 24px;
+      color: #ffffff;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeInOut 2s infinite;
+    }
+    
+    .loading-dots {
+      display: flex;
+      gap: 8px;
+    }
+    
+    .loading-dot {
+      width: 8px;
+      height: 8px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      animation: bounce 1.4s infinite ease-in-out both;
+    }
+    
+    .loading-dot:nth-child(1) { animation-delay: -0.32s; }
+    .loading-dot:nth-child(2) { animation-delay: -0.16s; }
+    .loading-dot:nth-child(3) { animation-delay: 0s; }
+    
+    @keyframes fadeInOut {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+    
+    @keyframes bounce {
+      0%, 80%, 100% {
+        transform: scale(0);
+      }
+      40% {
+        transform: scale(1);
+      }
+    }
+    
+    /* 隐藏加载屏幕 */
+    .loading-screen.hidden {
+      opacity: 0;
+      transition: opacity 0.5s ease-out;
+      pointer-events: none;
+    }
+  </style>
+  <script type="module" crossorigin src="./assets/index-CmVxoNg6.js"></script>
+</head>
+<body>
+  <div id="root">
+    <div class="loading-screen" id="loading-screen">
+      <div class="loading-text">正在加载游戏...</div>
+      <div class="loading-dots">
+        <div class="loading-dot"></div>
+        <div class="loading-dot"></div>
+        <div class="loading-dot"></div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <script>
+    // 页面加载完成后隐藏加载屏幕
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        const loadingScreen = document.getElementById('loading-screen');
+        if (loadingScreen) {
+          loadingScreen.classList.add('hidden');
+          setTimeout(function() {
+            loadingScreen.style.display = 'none';
+          }, 500);
+        }
+      }, 1000);
+    });
+    
+    // 字体加载检测
+    if ('fonts' in document) {
+      document.fonts.ready.then(function() {
+        console.log('字体加载完成');
+      });
+    }
+  </script>
+</body>
+</html>
