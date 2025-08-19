@@ -133,6 +133,10 @@ npm run format
 
 本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
 
+## 📜 行为准则
+
+我们希望创建一个友好和包容的社区。请阅读我们的[行为准则](CODE_OF_CONDUCT.md)，了解我们的社区标准。
+
 ## 🤝 贡献
 
 欢迎提交 Issue 和 Pull Request！
@@ -150,6 +154,12 @@ npm run format
 - 提交 GitHub Issue
 
 ## 🙏 致谢
+
+
+<a href="https://www.netlify.com">
+  <img src="https://www.netlify.com/assets/badges/netlify-badge-color-accent.svg" alt="Deploys by Netlify" />
+</a>
+
 
 - 感谢所有开源库的贡献者
 - 特别感谢 React、TypeScript 和 Vite 团队
